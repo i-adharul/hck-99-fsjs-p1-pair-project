@@ -10,7 +10,19 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Coupon.belongsTo(models.Category, {
+        foreignKey: 'category_id'
+      })
+
+      Coupon.belongsToMany(models.Order, {
+        through: models.OrderItem,
+        foreignKey: 'coupon_id',
+        otherKey: 'order_id'
+      });
+
+      Coupon.hasMany(models.OrderItem, {
+        foreignKey: 'coupon_id'
+      })
     }
   }
   Coupon.init({
@@ -19,7 +31,8 @@ module.exports = (sequelize, DataTypes) => {
     price: DataTypes.INTEGER,
     stock: DataTypes.INTEGER,
     expired_date: DataTypes.DATE,
-    image: DataTypes.STRING
+    image: DataTypes.STRING,
+    category_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Coupon',
