@@ -1,0 +1,452 @@
+[
+  {
+    "title": "Tiket Masuk Taman Safari",
+    "description": "Nikmati petualangan seru bertemu satwa liar dari dekat",
+    "price": 150000,
+    "stock": 200,
+    "expired_date": "2027-08-12",
+    "image": "tiket-masuk-taman-safari.jpg",
+    "category_id": 1
+  },
+  {
+    "title": "Tiket Museum Nasional",
+    "description": "Jelajahi koleksi sejarah dan budaya Indonesia",
+    "price": 25000,
+    "stock": 500,
+    "expired_date": "2026-11-15",
+    "image": "tiket-museum-nasional.jpg",
+    "category_id": 1
+  },
+  {
+    "title": "Tiket Waterpark Ceria",
+    "description": "Seharian bermain air bersama keluarga",
+    "price": 100000,
+    "stock": 150,
+    "expired_date": "2026-10-01",
+    "image": "tiket-waterpark-ceria.jpg",
+    "category_id": 1
+  },
+  {
+    "title": "Tiket Kebun Binatang Kota",
+    "description": "Kunjungi ratusan spesies hewan langka",
+    "price": 40000,
+    "stock": 300,
+    "expired_date": "2027-02-06",
+    "image": "tiket-kebun-binatang-kota.jpg",
+    "category_id": 1
+  },
+  {
+    "title": "Tiket Candi Bersejarah",
+    "description": "Wisata edukasi ke situs warisan dunia",
+    "price": 50000,
+    "stock": 250,
+    "expired_date": "2027-01-22",
+    "image": "tiket-candi-bersejarah.jpg",
+    "category_id": 1
+  },
+  {
+    "title": "Tiket Taman Bunga",
+    "description": "Foto-foto cantik di tengah ribuan bunga warna-warni",
+    "price": 35000,
+    "stock": 180,
+    "expired_date": "2027-01-11",
+    "image": "tiket-taman-bunga.jpg",
+    "category_id": 1
+  },
+  {
+    "title": "Tiket Wahana Permainan",
+    "description": "Akses semua wahana seharian penuh",
+    "price": 175000,
+    "stock": 120,
+    "expired_date": "2026-11-29",
+    "image": "tiket-wahana-permainan.jpg",
+    "category_id": 1
+  },
+  {
+    "title": "Voucher Menginap Villa Puncak",
+    "description": "Satu malam di villa dengan pemandangan pegunungan",
+    "price": 850000,
+    "stock": 20,
+    "expired_date": "2026-11-10",
+    "image": "voucher-menginap-villa-puncak.jpg",
+    "category_id": 2
+  },
+  {
+    "title": "Voucher Hotel Bintang 3 Malam Minggu",
+    "description": "Kamar nyaman dengan sarapan gratis",
+    "price": 450000,
+    "stock": 40,
+    "expired_date": "2027-06-25",
+    "image": "voucher-hotel-bintang-3-malam-minggu.jpg",
+    "category_id": 2
+  },
+  {
+    "title": "Voucher Glamping Tepi Danau",
+    "description": "Pengalaman camping mewah dengan fasilitas lengkap",
+    "price": 600000,
+    "stock": 15,
+    "expired_date": "2026-11-02",
+    "image": "voucher-glamping-tepi-danau.jpg",
+    "category_id": 2
+  },
+  {
+    "title": "Voucher Homestay Desa Wisata",
+    "description": "Menginap di rumah tradisional yang asri",
+    "price": 250000,
+    "stock": 30,
+    "expired_date": "2027-07-18",
+    "image": "voucher-homestay-desa-wisata.jpg",
+    "category_id": 2
+  },
+  {
+    "title": "Voucher Resort Pantai",
+    "description": "Nikmati sunset langsung dari kamar tidur",
+    "price": 1200000,
+    "stock": 10,
+    "expired_date": "2027-04-23",
+    "image": "voucher-resort-pantai.jpg",
+    "category_id": 2
+  },
+  {
+    "title": "Voucher Cottage Kebun Teh",
+    "description": "Suasana sejuk di tengah hamparan kebun teh",
+    "price": 500000,
+    "stock": 25,
+    "expired_date": "2026-10-05",
+    "image": "voucher-cottage-kebun-teh.jpg",
+    "category_id": 2
+  },
+  {
+    "title": "Voucher Makan Resto Danau",
+    "description": "Menu spesial ikan bakar dengan pemandangan danau",
+    "price": 75000,
+    "stock": 100,
+    "expired_date": "2026-10-04",
+    "image": "voucher-makan-resto-danau.jpg",
+    "category_id": 3
+  },
+  {
+    "title": "Voucher Cafe Rooftop Wisata",
+    "description": "Nikmati kopi sambil melihat kota dari atas",
+    "price": 60000,
+    "stock": 150,
+    "expired_date": "2026-11-05",
+    "image": "voucher-cafe-rooftop-wisata.jpg",
+    "category_id": 3
+  },
+  {
+    "title": "Voucher All You Can Eat Seafood",
+    "description": "Sepuasnya makan seafood segar",
+    "price": 120000,
+    "stock": 80,
+    "expired_date": "2027-01-08",
+    "image": "voucher-all-you-can-eat-seafood.jpg",
+    "category_id": 3
+  },
+  {
+    "title": "Voucher Kuliner Tradisional Pasar Wisata",
+    "description": "Cicipi jajanan khas daerah setempat",
+    "price": 30000,
+    "stock": 200,
+    "expired_date": "2027-01-16",
+    "image": "voucher-kuliner-tradisional-pasar-wisata.jpg",
+    "category_id": 3
+  },
+  {
+    "title": "Voucher Makan Malam Romantis",
+    "description": "Dinner spesial dengan live music",
+    "price": 200000,
+    "stock": 50,
+    "expired_date": "2027-06-04",
+    "image": "voucher-makan-malam-romantis.jpg",
+    "category_id": 3
+  },
+  {
+    "title": "Voucher Food Court Taman Wisata",
+    "description": "Bebas pilih menu dari berbagai stand kuliner",
+    "price": 50000,
+    "stock": 180,
+    "expired_date": "2027-07-24",
+    "image": "voucher-food-court-taman-wisata.jpg",
+    "category_id": 3
+  },
+  {
+    "title": "Voucher Kopi Kebun Petik Sendiri",
+    "description": "Nikmati kopi hasil petik langsung dari kebun",
+    "price": 45000,
+    "stock": 90,
+    "expired_date": "2026-10-02",
+    "image": "voucher-kopi-kebun-petik-sendiri.jpg",
+    "category_id": 3
+  },
+  {
+    "title": "Voucher Rafting Sungai Ciliwung",
+    "description": "Susuri jeram dengan tim pemandu berpengalaman",
+    "price": 175000,
+    "stock": 60,
+    "expired_date": "2027-07-03",
+    "image": "voucher-rafting-sungai-ciliwung.jpg",
+    "category_id": 4
+  },
+  {
+    "title": "Voucher Diving Spot Karang",
+    "description": "Jelajahi keindahan bawah laut bersama instruktur",
+    "price": 350000,
+    "stock": 30,
+    "expired_date": "2026-12-29",
+    "image": "voucher-diving-spot-karang.jpg",
+    "category_id": 4
+  },
+  {
+    "title": "Voucher Paralayang Puncak Bukit",
+    "description": "Rasakan sensasi terbang bebas di udara",
+    "price": 400000,
+    "stock": 20,
+    "expired_date": "2027-08-17",
+    "image": "voucher-paralayang-puncak-bukit.jpg",
+    "category_id": 4
+  },
+  {
+    "title": "Voucher Sewa ATV Offroad",
+    "description": "Serunya menjelajah medan berlumpur dan menantang",
+    "price": 150000,
+    "stock": 40,
+    "expired_date": "2027-06-25",
+    "image": "voucher-sewa-atv-offroad.jpg",
+    "category_id": 4
+  },
+  {
+    "title": "Voucher Hiking Guide Gunung",
+    "description": "Pendakian didampingi guide lokal berpengalaman",
+    "price": 200000,
+    "stock": 35,
+    "expired_date": "2027-04-21",
+    "image": "voucher-hiking-guide-gunung.jpg",
+    "category_id": 4
+  },
+  {
+    "title": "Voucher Flying Fox Hutan Wisata",
+    "description": "Meluncur di atas kanopi hutan yang hijau",
+    "price": 80000,
+    "stock": 100,
+    "expired_date": "2027-01-09",
+    "image": "voucher-flying-fox-hutan-wisata.jpg",
+    "category_id": 4
+  },
+  {
+    "title": "Paket Tour 2 Hari 1 Malam Bromo",
+    "description": "Sunrise, jeep tour, dan penginapan termasuk",
+    "price": 950000,
+    "stock": 25,
+    "expired_date": "2027-05-06",
+    "image": "paket-tour-2-hari-1-malam-bromo.jpg",
+    "category_id": 5
+  },
+  {
+    "title": "Paket Wisata Sehari Kawah Putih",
+    "description": "Transport, tiket masuk, dan makan siang termasuk",
+    "price": 300000,
+    "stock": 40,
+    "expired_date": "2027-07-17",
+    "image": "paket-wisata-sehari-kawah-putih.jpg",
+    "category_id": 5
+  },
+  {
+    "title": "Paket Tour Keliling Kota Tua",
+    "description": "Guide, transport, dan camilan lokal",
+    "price": 175000,
+    "stock": 60,
+    "expired_date": "2027-02-08",
+    "image": "paket-tour-keliling-kota-tua.jpg",
+    "category_id": 5
+  },
+  {
+    "title": "Paket Honeymoon Bali 3 Hari",
+    "description": "Villa privat, spa, dan tur romantis berdua",
+    "price": 3500000,
+    "stock": 10,
+    "expired_date": "2026-09-22",
+    "image": "paket-honeymoon-bali-3-hari.jpg",
+    "category_id": 5
+  },
+  {
+    "title": "Paket Trip Keluarga Taman Safari",
+    "description": "Transport rombongan, tiket, dan makan siang",
+    "price": 500000,
+    "stock": 20,
+    "expired_date": "2026-12-09",
+    "image": "paket-trip-keluarga-taman-safari.jpg",
+    "category_id": 5
+  },
+  {
+    "title": "Paket Wisata Religi Ziarah",
+    "description": "Perjalanan ke situs religi bersejarah",
+    "price": 400000,
+    "stock": 30,
+    "expired_date": "2027-04-23",
+    "image": "paket-wisata-religi-ziarah.jpg",
+    "category_id": 5
+  },
+  {
+    "title": "Voucher Spa Tradisional Bali",
+    "description": "Pijat relaksasi dengan minyak aromaterapi khas Bali",
+    "price": 250000,
+    "stock": 40,
+    "expired_date": "2027-03-12",
+    "image": "voucher-spa-tradisional-bali.jpg",
+    "category_id": 7
+  },
+  {
+    "title": "Voucher Pemandian Air Panas Alami",
+    "description": "Rendam lelah di sumber air panas alami",
+    "price": 50000,
+    "stock": 100,
+    "expired_date": "2027-02-08",
+    "image": "voucher-pemandian-air-panas-alami.jpg",
+    "category_id": 7
+  },
+  {
+    "title": "Voucher Lulur & Massage Paket Lengkap",
+    "description": "Perawatan tubuh menyeluruh selama 90 menit",
+    "price": 300000,
+    "stock": 25,
+    "expired_date": "2026-12-07",
+    "image": "voucher-lulur-dan-massage-paket-lengkap.jpg",
+    "category_id": 7
+  },
+  {
+    "title": "Voucher Reflexology Kaki",
+    "description": "Pijat refleksi untuk melancarkan peredaran darah",
+    "price": 100000,
+    "stock": 60,
+    "expired_date": "2027-01-07",
+    "image": "voucher-reflexology-kaki.jpg",
+    "category_id": 7
+  },
+  {
+    "title": "Voucher Onsen Style Wellness",
+    "description": "Pengalaman berendam ala Jepang di pegunungan",
+    "price": 180000,
+    "stock": 30,
+    "expired_date": "2027-03-10",
+    "image": "voucher-onsen-style-wellness.jpg",
+    "category_id": 7
+  },
+  {
+    "title": "Voucher Yoga & Meditasi Alam Terbuka",
+    "description": "Sesi yoga pagi ditemani udara segar pegunungan",
+    "price": 90000,
+    "stock": 50,
+    "expired_date": "2026-11-10",
+    "image": "voucher-yoga-dan-meditasi-alam-terbuka.jpg",
+    "category_id": 7
+  },
+  {
+    "title": "Voucher Belanja Oleh-oleh Khas Daerah",
+    "description": "Potongan harga untuk kerajinan dan makanan khas",
+    "price": 20000,
+    "stock": 300,
+    "expired_date": "2026-11-05",
+    "image": "voucher-belanja-oleh-oleh-khas-daerah.jpg",
+    "category_id": 8
+  },
+  {
+    "title": "Voucher Toko Batik Lokal",
+    "description": "Diskon pembelian batik tulis dan cap asli",
+    "price": 100000,
+    "stock": 80,
+    "expired_date": "2027-04-01",
+    "image": "voucher-toko-batik-lokal.jpg",
+    "category_id": 8
+  },
+  {
+    "title": "Voucher Kerajinan Ukir Kayu",
+    "description": "Belanja souvenir ukiran kayu khas pengrajin lokal",
+    "price": 50000,
+    "stock": 120,
+    "expired_date": "2026-11-07",
+    "image": "voucher-kerajinan-ukir-kayu.jpg",
+    "category_id": 8
+  },
+  {
+    "title": "Voucher Pasar Seni Wisata",
+    "description": "Belanja aneka kerajinan tangan unik",
+    "price": 30000,
+    "stock": 150,
+    "expired_date": "2027-03-21",
+    "image": "voucher-pasar-seni-wisata.jpg",
+    "category_id": 8
+  },
+  {
+    "title": "Voucher Kaos & Merchandise Wisata",
+    "description": "Diskon pembelian merchandise resmi destinasi wisata",
+    "price": 40000,
+    "stock": 200,
+    "expired_date": "2027-03-14",
+    "image": "voucher-kaos-dan-merchandise-wisata.jpg",
+    "category_id": 8
+  },
+  {
+    "title": "Voucher Aksesoris Mutiara Lokal",
+    "description": "Belanja perhiasan mutiara asli hasil kerajinan lokal",
+    "price": 150000,
+    "stock": 60,
+    "expired_date": "2027-07-25",
+    "image": "voucher-aksesoris-mutiara-lokal.jpg",
+    "category_id": 8
+  },
+  {
+    "title": "Tiket Festival Budaya Tahunan",
+    "description": "Saksikan pertunjukan seni dan budaya lokal",
+    "price": 75000,
+    "stock": 200,
+    "expired_date": "2027-02-01",
+    "image": "tiket-festival-budaya-tahunan.jpg",
+    "category_id": 9
+  },
+  {
+    "title": "Tiket Konser Musik Lokal",
+    "description": "Nikmati penampilan musisi lokal favorit",
+    "price": 150000,
+    "stock": 100,
+    "expired_date": "2026-10-11",
+    "image": "tiket-konser-musik-lokal.jpg",
+    "category_id": 9
+  },
+  {
+    "title": "Tiket Pertunjukan Tari Tradisional",
+    "description": "Tonton pagelaran tari khas daerah setempat",
+    "price": 50000,
+    "stock": 150,
+    "expired_date": "2027-05-12",
+    "image": "tiket-pertunjukan-tari-tradisional.jpg",
+    "category_id": 9
+  },
+  {
+    "title": "Tiket Pameran Seni Rupa",
+    "description": "Jelajahi karya seniman lokal dan internasional",
+    "price": 30000,
+    "stock": 180,
+    "expired_date": "2027-06-20",
+    "image": "tiket-pameran-seni-rupa.jpg",
+    "category_id": 9
+  },
+  {
+    "title": "Tiket Malam Kembang Api Tahun Baru",
+    "description": "Rayakan pergantian tahun dengan pesta kembang api",
+    "price": 200000,
+    "stock": 90,
+    "expired_date": "2026-11-21",
+    "image": "tiket-malam-kembang-api-tahun-baru.jpg",
+    "category_id": 9
+  },
+  {
+    "title": "Tiket Karnaval Budaya Nusantara",
+    "description": "Parade kostum dan budaya dari seluruh nusantara",
+    "price": 60000,
+    "stock": 160,
+    "expired_date": "2027-03-31",
+    "image": "tiket-karnaval-budaya-nusantara.jpg",
+    "category_id": 9
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Attraction",
+    "description": "Tiket masuk tempat wisata, taman hiburan, museum, hingga kebun binatang"
+  },
+  {
+    "name": "Accommodation",
+    "description": "Hotel, villa, homestay, dan glamping di area wisata"
+  },
+  {
+    "name": "Culinary",
+    "description": "Resto, cafe, dan food court yang berada di kawasan wisata"
+  },
+  {
+    "name": "Adventure & Activity",
+    "description": "Rafting, diving, hiking, paralayang, ATV, dan aktivitas seru lainnya"
+  },
+  {
+    "name": "Tour Package",
+    "description": "Paket wisata lengkap mulai dari guide, transportasi, hingga tiket masuk"
+  },
+  {
+    "name": "Transportation",
+    "description": "Sewa kapal, shuttle wisata, sewa motor atau sepeda di lokasi wisata"
+  },
+  {
+    "name": "Spa & Wellness",
+    "description": "Spa, pijat tradisional, dan pemandian air panas untuk relaksasi"
+  },
+  {
+    "name": "Souvenir & Shopping",
+    "description": "Toko oleh-oleh dan kerajinan khas daerah wisata"
+  },
+  {
+    "name": "Event & Entertainment",
+    "description": "Tiket konser lokal, festival budaya, dan pertunjukan hiburan"
+  },
+  {
+    "name": "Photography Service",
+    "description": "Jasa foto liburan atau prewedding di spot-spot wisata favorit"
+  }
+]
