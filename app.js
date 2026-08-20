@@ -39,15 +39,15 @@ const isAdmin = function (req, res, next) {
 }
 //setup router nanti jangan lupa
 //setup router disini
-//middleware & session
 
-
-//butuh route logout
 app.get('/', Controller.landing)
 app.get('/register', Controller.register)
 app.post('/register', Controller.postRegister) //validate findOne, email sudah digunakan, password tidak mengandung apa
 app.get('/login', Controller.login)
 app.post('/login', Controller.postLogin)
+
+app.get('/cms', Controller.cms) //nanti dihapus
+app.post('/cms', Controller.postCoupon) //nanti dihapus
 
 app.use(
     function (req, res, next) {
@@ -63,18 +63,20 @@ app.use(
     })
 //nanti dimasukkan ke router.use(isLoggedIn) //yang app.use ga udah dipakai, uncomment fun isLoggedIn waktu 1:36
 
-app.get('/coupons', Controller.coupons)
-app.get('/coupons/:couponId', Controller.couponDetail)
 app.get('/checkout', Controller.checkout)
 app.get('/payments', Controller.payments)
 app.get('/payments/status', Controller.paymentStatus)
 app.get('/payments/status/success', Controller.paymentSuccess)
 app.get('/profile', Controller.profile)
 
-app.get('/cms', isAdmin, Controller.cms) //jangan lupa protect role
-app.post('/cms', isAdmin, Controller.postCoupon) //jangan lupa protect role
+// app.get('/cms', isAdmin, Controller.cms)
+// app.post('/cms', isAdmin, Controller.postCoupon)
 
 app.get('/logout', Controller.logout)
+app.get('/coupons/add', Controller.coupons) // nanti di redirect ke '/'
+app.get('/coupons/add', Controller.addCoupon)
+app.get('/coupons/post', Controller.postCoupon)
+app.get('/coupons/:couponId', Controller.couponDetail)
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`)

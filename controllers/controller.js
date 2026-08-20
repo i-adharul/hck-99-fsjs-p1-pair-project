@@ -82,26 +82,37 @@ class Controller {
 
     static async cms(req, res) {
         try {
-
+            let { search, category } = req.query
+            let coupons = await Coupon.getCouponsByCategory(search, category)
+            let cat = await Category.findAll()
+            res.render('cms', { coupons, cat, formatPrice })
         } catch (error) {
             res.send(error)
         }
     }
-
-    static async postCoupon(req, res) {
-        try {
-
-        } catch (error) {
-            res.send(error)
-        }
-    }
-
+    
     static async coupons(req, res) {
+        try {
+            res.redirect('/')
+        } catch (error) {
+            res.send(error)
+        }
+    }
+    
+    static async addCoupon(req, res) {
         try {
             let coupons = await Coupon.findAll({
                 include: Category
             })
             res.send(coupons)
+        } catch (error) {
+            res.send(error)
+        }
+    }
+    
+    static async postCoupon(req, res) {
+        try {
+
         } catch (error) {
             res.send(error)
         }
