@@ -95,7 +95,7 @@
     "price": 250000,
     "stock": 30,
     "expired_date": "2027-07-18",
-    "image": "voucher-homestay-desa-wisata.jpg",
+    "image": "https://images.pexels.com/photos/12319511/pexels-photo-12319511.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 2
   },
   {
@@ -104,7 +104,7 @@
     "price": 1200000,
     "stock": 10,
     "expired_date": "2027-04-23",
-    "image": "voucher-resort-pantai.jpg",
+    "image": "https://images.pexels.com/photos/15298798/pexels-photo-15298798.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 2
   },
   {
@@ -113,7 +113,7 @@
     "price": 500000,
     "stock": 25,
     "expired_date": "2026-10-05",
-    "image": "voucher-cottage-kebun-teh.jpg",
+    "image": "https://images.pexels.com/photos/23192930/pexels-photo-23192930.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 2
   },
   {
@@ -122,7 +122,7 @@
     "price": 75000,
     "stock": 100,
     "expired_date": "2026-10-04",
-    "image": "voucher-makan-resto-danau.jpg",
+    "image": "https://images.pexels.com/photos/11653557/pexels-photo-11653557.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 3
   },
   {
@@ -131,7 +131,7 @@
     "price": 60000,
     "stock": 150,
     "expired_date": "2026-11-05",
-    "image": "voucher-cafe-rooftop-wisata.jpg",
+    "image": "https://images.pexels.com/photos/9741964/pexels-photo-9741964.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 3
   },
   {
@@ -140,7 +140,7 @@
     "price": 120000,
     "stock": 80,
     "expired_date": "2027-01-08",
-    "image": "voucher-all-you-can-eat-seafood.jpg",
+    "image": "https://images.pexels.com/photos/5490922/pexels-photo-5490922.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 3
   },
   {
@@ -149,7 +149,7 @@
     "price": 30000,
     "stock": 200,
     "expired_date": "2027-01-16",
-    "image": "voucher-kuliner-tradisional-pasar-wisata.jpg",
+    "image": "https://images.pexels.com/photos/29530641/pexels-photo-29530641.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 3
   },
   {
@@ -158,7 +158,7 @@
     "price": 200000,
     "stock": 50,
     "expired_date": "2027-06-04",
-    "image": "voucher-makan-malam-romantis.jpg",
+    "image": "https://images.pexels.com/photos/19763210/pexels-photo-19763210.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 3
   },
   {
@@ -167,7 +167,7 @@
     "price": 50000,
     "stock": 180,
     "expired_date": "2027-07-24",
-    "image": "voucher-food-court-taman-wisata.jpg",
+    "image": "https://images.pexels.com/photos/30210592/pexels-photo-30210592.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 3
   },
   {
@@ -176,7 +176,7 @@
     "price": 45000,
     "stock": 90,
     "expired_date": "2026-10-02",
-    "image": "voucher-kopi-kebun-petik-sendiri.jpg",
+    "image": "https://images.pexels.com/photos/30717831/pexels-photo-30717831.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 3
   },
   {
@@ -185,7 +185,7 @@
     "price": 175000,
     "stock": 60,
     "expired_date": "2027-07-03",
-    "image": "voucher-rafting-sungai-ciliwung.jpg",
+    "image": "https://images.pexels.com/photos/33986446/pexels-photo-33986446.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 4
   },
   {
@@ -194,7 +194,7 @@
     "price": 350000,
     "stock": 30,
     "expired_date": "2026-12-29",
-    "image": "voucher-diving-spot-karang.jpg",
+    "image": "https://images.pexels.com/photos/17984373/pexels-photo-17984373.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 4
   },
   {
@@ -203,7 +203,7 @@
     "price": 400000,
     "stock": 20,
     "expired_date": "2027-08-17",
-    "image": "voucher-paralayang-puncak-bukit.jpg",
+    "image": "https://images.pexels.com/photos/13655715/pexels-photo-13655715.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 4
   },
   {
@@ -212,7 +212,7 @@
     "price": 150000,
     "stock": 40,
     "expired_date": "2027-06-25",
-    "image": "voucher-sewa-atv-offroad.jpg",
+    "image": "https://images.pexels.com/photos/13252308/pexels-photo-13252308.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 4
   },
   {
@@ -221,7 +221,7 @@
     "price": 200000,
     "stock": 35,
     "expired_date": "2027-04-21",
-    "image": "voucher-hiking-guide-gunung.jpg",
+    "image": "https://images.pexels.com/photos/11724800/pexels-photo-11724800.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 4
   },
   {
@@ -230,7 +230,7 @@
     "price": 80000,
     "stock": 100,
     "expired_date": "2027-01-09",
-    "image": "voucher-flying-fox-hutan-wisata.jpg",
+    "image": "https://images.pexels.com/photos/9223072/pexels-photo-9223072.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 4
   },
   {
@@ -239,7 +239,7 @@
     "price": 950000,
     "stock": 25,
     "expired_date": "2027-05-06",
-    "image": "paket-tour-2-hari-1-malam-bromo.jpg",
+    "image": "https://images.pexels.com/photos/32644515/pexels-photo-32644515.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 5
   },
   {
@@ -248,7 +248,7 @@
     "price": 300000,
     "stock": 40,
     "expired_date": "2027-07-17",
-    "image": "paket-wisata-sehari-kawah-putih.jpg",
+    "image": "https://images.pexels.com/photos/32327538/pexels-photo-32327538.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 5
   },
   {
@@ -257,7 +257,7 @@
     "price": 175000,
     "stock": 60,
     "expired_date": "2027-02-08",
-    "image": "paket-tour-keliling-kota-tua.jpg",
+    "image": "https://images.pexels.com/photos/19521975/pexels-photo-19521975.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 5
   },
   {
@@ -266,7 +266,7 @@
     "price": 3500000,
     "stock": 10,
     "expired_date": "2026-09-22",
-    "image": "paket-honeymoon-bali-3-hari.jpg",
+    "image": "https://images.pexels.com/photos/1024967/pexels-photo-1024967.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 5
   },
   {
@@ -275,7 +275,7 @@
     "price": 500000,
     "stock": 20,
     "expired_date": "2026-12-09",
-    "image": "paket-trip-keluarga-taman-safari.jpg",
+    "image": "https://images.pexels.com/photos/13938328/pexels-photo-13938328.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 5
   },
   {
@@ -284,7 +284,7 @@
     "price": 400000,
     "stock": 30,
     "expired_date": "2027-04-23",
-    "image": "paket-wisata-religi-ziarah.jpg",
+    "image": "https://images.pexels.com/photos/36225580/pexels-photo-36225580.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 5
   },
   {
@@ -293,7 +293,7 @@
     "price": 250000,
     "stock": 40,
     "expired_date": "2027-03-12",
-    "image": "voucher-spa-tradisional-bali.jpg",
+    "image": "https://images.pexels.com/photos/9146364/pexels-photo-9146364.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 7
   },
   {
@@ -302,7 +302,7 @@
     "price": 50000,
     "stock": 100,
     "expired_date": "2027-02-08",
-    "image": "voucher-pemandian-air-panas-alami.jpg",
+    "image": "https://images.pexels.com/photos/5273530/pexels-photo-5273530.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 7
   },
   {
@@ -311,7 +311,7 @@
     "price": 300000,
     "stock": 25,
     "expired_date": "2026-12-07",
-    "image": "voucher-lulur-dan-massage-paket-lengkap.jpg",
+    "image": "https://images.pexels.com/photos/5240752/pexels-photo-5240752.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 7
   },
   {
@@ -320,7 +320,7 @@
     "price": 100000,
     "stock": 60,
     "expired_date": "2027-01-07",
-    "image": "voucher-reflexology-kaki.jpg",
+    "image": "https://images.pexels.com/photos/5793888/pexels-photo-5793888.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 7
   },
   {
@@ -329,7 +329,7 @@
     "price": 180000,
     "stock": 30,
     "expired_date": "2027-03-10",
-    "image": "voucher-onsen-style-wellness.jpg",
+    "image": "https://images.pexels.com/photos/6620856/pexels-photo-6620856.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 7
   },
   {
@@ -338,7 +338,7 @@
     "price": 90000,
     "stock": 50,
     "expired_date": "2026-11-10",
-    "image": "voucher-yoga-dan-meditasi-alam-terbuka.jpg",
+    "image": "https://images.pexels.com/photos/19714770/pexels-photo-19714770.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 7
   },
   {
@@ -347,7 +347,7 @@
     "price": 20000,
     "stock": 300,
     "expired_date": "2026-11-05",
-    "image": "voucher-belanja-oleh-oleh-khas-daerah.jpg",
+    "image": "https://images.pexels.com/photos/4072329/pexels-photo-4072329.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 8
   },
   {
@@ -356,7 +356,7 @@
     "price": 100000,
     "stock": 80,
     "expired_date": "2027-04-01",
-    "image": "voucher-toko-batik-lokal.jpg",
+    "image": "https://images.pexels.com/photos/35243578/pexels-photo-35243578.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 8
   },
   {
@@ -365,7 +365,7 @@
     "price": 50000,
     "stock": 120,
     "expired_date": "2026-11-07",
-    "image": "voucher-kerajinan-ukir-kayu.jpg",
+    "image": "https://images.pexels.com/photos/5377650/pexels-photo-5377650.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 8
   },
   {
@@ -374,7 +374,7 @@
     "price": 30000,
     "stock": 150,
     "expired_date": "2027-03-21",
-    "image": "voucher-pasar-seni-wisata.jpg",
+    "image": "https://images.pexels.com/photos/16414304/pexels-photo-16414304.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 8
   },
   {
@@ -383,7 +383,7 @@
     "price": 40000,
     "stock": 200,
     "expired_date": "2027-03-14",
-    "image": "voucher-kaos-dan-merchandise-wisata.jpg",
+    "image": "https://images.pexels.com/photos/102129/pexels-photo-102129.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 8
   },
   {
@@ -392,7 +392,7 @@
     "price": 150000,
     "stock": 60,
     "expired_date": "2027-07-25",
-    "image": "voucher-aksesoris-mutiara-lokal.jpg",
+    "image": "https://images.pexels.com/photos/4532678/pexels-photo-4532678.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 8
   },
   {
@@ -401,7 +401,7 @@
     "price": 75000,
     "stock": 200,
     "expired_date": "2027-02-01",
-    "image": "tiket-festival-budaya-tahunan.jpg",
+    "image": "https://images.pexels.com/photos/19331601/pexels-photo-19331601.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 9
   },
   {
@@ -410,7 +410,7 @@
     "price": 150000,
     "stock": 100,
     "expired_date": "2026-10-11",
-    "image": "tiket-konser-musik-lokal.jpg",
+    "image": "https://images.pexels.com/photos/1765712/pexels-photo-1765712.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 9
   },
   {
@@ -419,7 +419,7 @@
     "price": 50000,
     "stock": 150,
     "expired_date": "2027-05-12",
-    "image": "tiket-pertunjukan-tari-tradisional.jpg",
+    "image": "https://images.pexels.com/photos/31965116/pexels-photo-31965116.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 9
   },
   {
@@ -428,7 +428,7 @@
     "price": 30000,
     "stock": 180,
     "expired_date": "2027-06-20",
-    "image": "tiket-pameran-seni-rupa.jpg",
+    "image": "https://images.pexels.com/photos/69903/pexels-photo-69903.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 9
   },
   {
@@ -437,7 +437,7 @@
     "price": 200000,
     "stock": 90,
     "expired_date": "2026-11-21",
-    "image": "tiket-malam-kembang-api-tahun-baru.jpg",
+    "image": "https://images.pexels.com/photos/10967/pexels-photo-10967.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 9
   },
   {
@@ -446,7 +446,7 @@
     "price": 60000,
     "stock": 160,
     "expired_date": "2027-03-31",
-    "image": "tiket-karnaval-budaya-nusantara.jpg",
+    "image": "https://images.pexels.com/photos/31174990/pexels-photo-31174990.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 9
   }
 ]

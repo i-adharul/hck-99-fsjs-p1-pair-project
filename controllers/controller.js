@@ -7,34 +7,16 @@ const {
     Profile,
     User
 } = require('../models');
-const {Op} = require('sequelize')
+const { Op } = require('sequelize')
+const formatPrice = require('../helpers/helper')
 
 class Controller {
     static async landing(req, res) {
         try {
-            let { search } = req.query
-            let option = {
-                include: Category,
-                where: {}
-            }
-            if (search) {
-                option.where = {
-                    [Op.or]: [
-                        {
-                            title: {
-                                [Op.iLike]: `%${search}%`
-                            }
-                        },
-                        {
-                            description: {
-                                [Op.iLike]: `%${search}%`
-                            }
-                        }
-                    ]
-                }
-            }
-            let coupons = await Coupon.findAll(option)
-            res.render('landingPage', { coupons })
+            let { search, category } = req.query
+            let coupons = await Coupon.getCouponsByCategory(search, category)
+            let cat = await Category.findAll()
+            res.render('landingPage', { coupons, cat, formatPrice })
         } catch (error) {
             res.send(error.message)
         }
@@ -42,7 +24,20 @@ class Controller {
 
     static async register(req, res) {
         try {
+            res.render('register')
+        } catch (error) {
+            res.send(error)
+        }
+    }
 
+    static async postRegister(req, res) {
+        try {
+            const { email, password } = req.body
+            await User.create({
+                email,
+                password_hash: password
+            })
+            res.render('coupons')
         } catch (error) {
             res.send(error)
         }
@@ -50,7 +45,15 @@ class Controller {
 
     static async login(req, res) {
         try {
+            res.render('login')
+        } catch (error) {
+            res.send(error)
+        }
+    }
 
+    static async postLogin(req, res) {
+        try {
+            res.render('coupons')
         } catch (error) {
             res.send(error)
         }

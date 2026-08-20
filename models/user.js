@@ -2,13 +2,10 @@
 const {
   Model
 } = require('sequelize');
+const bcrypt = require('bcrypt')
+
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
       User.hasOne(models.Profile, {
         foreignKey: 'user_id'
@@ -26,6 +23,12 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'User',
+  });
+
+  User.beforeCreate(async (user, options) => {
+    // const hashedPassword = await hashPassword(user.password);
+    // user.password = hashedPassword;
+    user.role = "user"
   });
   return User;
 };

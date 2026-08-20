@@ -2,13 +2,10 @@
 const {
   Model
 } = require('sequelize');
+const {Op} = require('sequelize')
+
 module.exports = (sequelize, DataTypes) => {
   class Coupon extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
       Coupon.belongsTo(models.Category, {
         foreignKey: 'category_id'
@@ -23,6 +20,37 @@ module.exports = (sequelize, DataTypes) => {
       Coupon.hasMany(models.OrderItem, {
         foreignKey: 'coupon_id'
       })
+    }
+
+    static async getCouponsByCategory(search, category) {
+      let option = {
+        include: "Category",
+        where: {}
+      }
+
+      if (search || category) {
+        option.where = {
+          [Op.or]: [
+            {
+              title: {
+                [Op.iLike]: `%${search}%`
+              }
+            },
+            {
+              description: {
+                [Op.iLike]: `%${search}%`
+              }
+            },
+            {
+              category_id: {
+                [Op.eq]: category
+              }
+            }
+          ]
+        }
+      }
+
+      return await Coupon.findAll(option)
     }
   }
   Coupon.init({

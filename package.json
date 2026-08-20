@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/i-adharul/hck-99-fsjs-p1-pair-project#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "ejs": "^6.0.1",
     "express": "^5.2.1",
     "pg": "^8.23.0",
