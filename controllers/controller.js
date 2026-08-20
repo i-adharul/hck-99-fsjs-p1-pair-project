@@ -98,10 +98,10 @@ class Controller {
 
     static async cms(req, res) {
         try {
-            let { search, category } = req.query
+            let { search, category, deletedCoupon } = req.query
             let coupons = await Coupon.getCouponsByCategory(search, category)
             let cat = await Category.findAll()
-            res.render('cms', { coupons, cat, formatPrice })
+            res.render('cms', { coupons, cat, formatPrice, deletedCoupon })
         } catch (error) {
             res.send(error)
         }
@@ -134,6 +134,17 @@ class Controller {
     static async couponDetail(req, res) {
         try {
 
+        } catch (error) {
+            res.send(error)
+        }
+    }
+
+    static async deleteCoupon(req, res) {
+        try {
+            const {couponId} = req.params
+            let coupon = await Coupon.findByPk(couponId)
+            await coupon.destroy()
+            res.redirect(`/cms?deletedCoupon=${coupon.title}`)
         } catch (error) {
             res.send(error)
         }

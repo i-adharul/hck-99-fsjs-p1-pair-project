@@ -52,6 +52,7 @@ app.get('/profile', Controller.profile) //nanti dihapus
 app.get('/profile/edit', Controller.editProfile)
 app.get('/profile/delete', Controller.deleteProfile)
 
+/*
 app.use(
     function (req, res, next) {
         if (!req.session.email) {
@@ -64,24 +65,29 @@ app.use(
             next()
         }
     })
+*/
 //nanti dimasukkan ke router.use(isLoggedIn) //yang app.use ga udah dipakai, uncomment fun isLoggedIn waktu 1:36
 
 app.get('/checkout', Controller.checkout)
 app.get('/payments', Controller.payments)
 app.get('/payments/status', Controller.paymentStatus)
 app.get('/payments/status/success', Controller.paymentSuccess)
-// app.get('/profile', Controller.profile)
-// app.get('/profile/add', Controller.profile)
-// app.get('/profile/edit', Controller.profile)
+app.get('/profile', Controller.profile)
+app.get('/profile/add', Controller.profile)
+app.get('/profile/edit', Controller.profile)
+app.get('/profile/delete', Controller.deleteProfile)
 
 // app.get('/cms', isAdmin, Controller.cms)
 // app.post('/cms', isAdmin, Controller.postCoupon)
+app.get('/cms', Controller.cms)
+app.post('/cms', Controller.postCoupon)
 
 app.get('/logout', Controller.logout)
-app.get('/coupons/add', Controller.coupons) // nanti di redirect ke '/'
+app.get('/coupons', Controller.coupons) // nanti di redirect ke '/'
 app.get('/coupons/add', Controller.addCoupon)
 app.get('/coupons/post', Controller.postCoupon)
 app.get('/coupons/:couponId', Controller.couponDetail)
+app.get('/coupons/:couponId/delete', Controller.deleteCoupon)
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`)
