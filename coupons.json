@@ -5,7 +5,7 @@
     "price": 150000,
     "stock": 200,
     "expired_date": "2027-08-12",
-    "image": "tiket-masuk-taman-safari.jpg",
+    "image": "https://images.pexels.com/photos/13983136/pexels-photo-13983136.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 1
   },
   {
@@ -14,7 +14,7 @@
     "price": 25000,
     "stock": 500,
     "expired_date": "2026-11-15",
-    "image": "tiket-museum-nasional.jpg",
+    "image": "https://images.pexels.com/photos/29284804/pexels-photo-29284804.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 1
   },
   {
@@ -23,7 +23,7 @@
     "price": 100000,
     "stock": 150,
     "expired_date": "2026-10-01",
-    "image": "tiket-waterpark-ceria.jpg",
+    "image": "https://images.pexels.com/photos/28127252/pexels-photo-28127252.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 1
   },
   {
@@ -32,7 +32,7 @@
     "price": 40000,
     "stock": 300,
     "expired_date": "2027-02-06",
-    "image": "tiket-kebun-binatang-kota.jpg",
+    "image": "https://images.pexels.com/photos/17857936/pexels-photo-17857936.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 1
   },
   {
@@ -41,7 +41,7 @@
     "price": 50000,
     "stock": 250,
     "expired_date": "2027-01-22",
-    "image": "tiket-candi-bersejarah.jpg",
+    "image": "https://images.pexels.com/photos/29039149/pexels-photo-29039149.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 1
   },
   {
@@ -50,7 +50,7 @@
     "price": 35000,
     "stock": 180,
     "expired_date": "2027-01-11",
-    "image": "tiket-taman-bunga.jpg",
+    "image": "https://images.pexels.com/photos/16362129/pexels-photo-16362129.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 1
   },
   {
@@ -59,7 +59,7 @@
     "price": 175000,
     "stock": 120,
     "expired_date": "2026-11-29",
-    "image": "tiket-wahana-permainan.jpg",
+    "image": "https://images.pexels.com/photos/2128165/pexels-photo-2128165.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 1
   },
   {
@@ -68,7 +68,7 @@
     "price": 850000,
     "stock": 20,
     "expired_date": "2026-11-10",
-    "image": "voucher-menginap-villa-puncak.jpg",
+    "image": "https://images.pexels.com/photos/29453302/pexels-photo-29453302.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 2
   },
   {
@@ -77,7 +77,7 @@
     "price": 450000,
     "stock": 40,
     "expired_date": "2027-06-25",
-    "image": "voucher-hotel-bintang-3-malam-minggu.jpg",
+    "image": "https://images.pexels.com/photos/27901676/pexels-photo-27901676.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 2
   },
   {
@@ -86,7 +86,7 @@
     "price": 600000,
     "stock": 15,
     "expired_date": "2026-11-02",
-    "image": "voucher-glamping-tepi-danau.jpg",
+    "image": "https://images.pexels.com/photos/6271666/pexels-photo-6271666.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category_id": 2
   },
   {
