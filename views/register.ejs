@@ -103,10 +103,23 @@
                             <input type="email" class="form-control" id="email" name="email" placeholder="nama@email.com">
                         </div>
 
-                        <div class="mb-4">
+                        <div class="mb-3">
                             <label for="password" class="form-label small fw-semibold text-secondary mb-1">Password</label>
                             <input type="password" class="form-control" id="password" name="password" placeholder="Buat password aman">
                             <div class="form-text text-muted" style="font-size: 0.75rem;">Minimal 6 karakter atau kombinasi angka & huruf.</div>
+                        </div>
+
+                        <!-- Container Pesan Error / Penjaga Jarak -->
+                        <div class="error-container mb-3" style="min-height: 44px;">
+                            <% if (typeof error !== 'undefined' && error) { %>
+                                <div class="alert alert-danger py-2 px-3 small d-flex align-items-center mb-0 border-0 shadow-sm" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                                    </svg>
+                                    <div><%= error %></div>
+                                </div>
+                            <% } %>
                         </div>
 
                         <button type="submit" class="btn btn-purple w-100 py-2 mb-3">Daftar Akun</button>
