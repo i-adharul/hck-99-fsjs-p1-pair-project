@@ -16,7 +16,7 @@ app.listen(port, () => {
 //butuh route logout
 app.get('/', Controller.landing)
 app.get('/register', Controller.register)
-app.post('/register', Controller.postRegister)
+app.post('/register', Controller.postRegister) //validate findOne, email sudah digunakan, password tidak mengandung apa
 app.get('/login', Controller.login)
 app.post('/login', Controller.postLogin)
 app.get('/cms', Controller.cms) //jangan lupa protect role

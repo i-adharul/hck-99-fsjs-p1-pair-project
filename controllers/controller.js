@@ -9,6 +9,7 @@ const {
 } = require('../models');
 const { Op } = require('sequelize')
 const formatPrice = require('../helpers/helper')
+const bcrypt = require('bcryptjs')
 
 class Controller {
     static async landing(req, res) {
@@ -45,7 +46,8 @@ class Controller {
 
     static async login(req, res) {
         try {
-            res.render('login')
+            const { error } = req.query
+            res.render('login', { error })
         } catch (error) {
             res.send(error)
         }
@@ -53,9 +55,23 @@ class Controller {
 
     static async postLogin(req, res) {
         try {
-            res.render('coupons')
+            const { email, password } = req.body
+            let user = await User.findOne({ where: { email } })
+            if (user) {
+                const isValidPassword = bcrypt.compareSync(password, user.password_hash)
+
+                if (isValidPassword) {
+                    return res.redirect('/')
+                } else {
+                    const error = "Invalid email or password."
+                    return res.redirect(`/login?error=${error}`)
+                }
+            } else {
+                const error = "Invalid email or password."
+                return res.redirect(`/login?error=${error}`)
+            }
         } catch (error) {
-            res.send(error)
+            res.send(error.message)
         }
     }
 
