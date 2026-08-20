@@ -57,10 +57,15 @@ class Controller {
         try {
             const { email, password } = req.body
             let user = await User.findOne({ where: { email } })
+            // console.log({ email, password });
             if (user) {
                 const isValidPassword = bcrypt.compareSync(password, user.password_hash)
 
+                // console.log(isValidPassword);
                 if (isValidPassword) {
+                    //set session
+                    req.session.email = user.email
+                    req.session.role = user.role
                     return res.redirect('/')
                 } else {
                     const error = "Invalid email or password."
@@ -144,7 +149,15 @@ class Controller {
 
     static async profile(req, res) {
         try {
+            res.render('profile')
+        } catch (error) {
+            res.send(error)
+        }
+    }
 
+    static async logout(req, res) {
+        try {
+            req.session.destroy(res.redirect('login'))
         } catch (error) {
             res.send(error)
         }
