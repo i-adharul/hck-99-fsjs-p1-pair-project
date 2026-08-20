@@ -40,12 +40,13 @@ class Controller {
             if (user) {
                 const error = "Email already exist."
                 return res.redirect(`/register?error=${error}`)
+            } else {
+                await User.create({
+                    email,
+                    password_hash: password
+                })
+                res.redirect('/login')
             }
-            await User.create({
-                email,
-                password_hash: password
-            })
-            res.redirect('/login')
         } catch (error) {
             if (error.name === "SequelizeValidationError") {
                 let errors = error.errors.map(obj => obj.message)
@@ -123,9 +124,62 @@ class Controller {
         }
     }
 
-    static async postCoupon(req, res) {
+    static async postAddCoupon(req, res) {
         try {
             // next release
+        } catch (error) {
+            res.send(error)
+        }
+    }
+
+    static async editCoupon(req, res) {
+        try {
+            const { couponId } = req.params
+            let coupon = await Coupon.findByPk(couponId)
+            let cat = await Category.findAll()
+            res.render('editCoupon', { coupon, cat })
+        } catch (error) {
+            res.send(error)
+        }
+    }
+
+    static async postEditCoupon(req, res) {
+        try {
+            const { couponId } = req.params
+            let {
+                title,
+                category_id,
+                description,
+                price,
+                stock,
+                image,
+                expired_date
+            } =req.body
+            await Coupon.update({
+                title,
+                category_id,
+                description,
+                price,
+                stock,
+                image,
+                expired_date
+            },{
+                where: {
+                    id: couponId
+                }
+            })
+            res.redirect('/cms')
+        } catch (error) {
+            res.send(error)
+        }
+    }
+
+    static async deleteCoupon(req, res) {
+        try {
+            const { couponId } = req.params
+            let coupon = await Coupon.findByPk(couponId)
+            await coupon.destroy()
+            res.redirect(`/cms?deletedCoupon=${coupon.title}`)
         } catch (error) {
             res.send(error)
         }
@@ -134,17 +188,6 @@ class Controller {
     static async couponDetail(req, res) {
         try {
 
-        } catch (error) {
-            res.send(error)
-        }
-    }
-
-    static async deleteCoupon(req, res) {
-        try {
-            const {couponId} = req.params
-            let coupon = await Coupon.findByPk(couponId)
-            await coupon.destroy()
-            res.redirect(`/cms?deletedCoupon=${coupon.title}`)
         } catch (error) {
             res.send(error)
         }
@@ -202,7 +245,7 @@ class Controller {
 
     static async deleteProfile(req, res) {
         try {
-            
+
         } catch (error) {
             res.send(error.message)
         }
@@ -210,7 +253,7 @@ class Controller {
 
     static async editProfile(req, res) {
         try {
-            
+
         } catch (error) {
             res.send(error.message)
         }

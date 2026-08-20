@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Coupon - Kupota CMS</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: #6a1b9a !important;
+        }
+
+        .top-bar {
+            background-color: #6a1b9a;
+            color: #fff;
+            height: 28px;
+        }
+
+        .form-card {
+            border: none;
+            border-radius: 12px;
+            background-color: #ffffff;
+            max-width: 680px;
+            width: 100%;
+        }
+
+        .btn-purple {
+            background-color: #6a1b9a;
+            color: #ffffff;
+            font-weight: 600;
+            border: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-purple:hover {
+            background-color: #53147d;
+            color: #ffffff;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #6a1b9a;
+            box-shadow: 0 0 0 0.25rem rgba(106, 27, 154, 0.15);
+        }
+
+        footer {
+            background-color: #fff;
+            border-top: 1px solid #dee2e6;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top utility bar -->
+    <div class="top-bar py-1 px-3"></div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-2">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand me-4" href="/cms">Kupota <span class="badge bg-secondary fs-6 align-middle ms-1">CMS</span></a>
+            <div class="d-flex align-items-center ms-auto">
+                <a href="/logout" class="btn btn-outline-danger btn-sm px-3 fw-semibold">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Form Container -->
+    <div class="container d-flex justify-content-center py-5 flex-grow-1">
+        <div class="card form-card shadow-sm p-3 p-md-4">
+            <div class="card-body">
+                
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h4 class="fw-bold mb-0">Edit Coupon</h4>
+                    <a href="/cms" class="btn btn-outline-secondary btn-sm px-3">&larr; Back to CMS</a>
+                </div>
+
+                <!-- Form Edit Kupon -->
+                <form action="/coupons/<%= coupon.id %>/edit" method="POST">
+                    
+                    <!-- Title -->
+                    <div class="mb-3">
+                        <label for="title" class="form-label small fw-semibold text-secondary">Coupon Title</label>
+                        <input type="text" class="form-control" id="title" name="title" value="<%= coupon.title %>" required>
+                    </div>
+
+                    <!-- Category -->
+                    <div class="mb-3">
+                        <label for="category_id" class="form-label small fw-semibold text-secondary">Category</label>
+                        <select class="form-select" id="category_id" name="category_id" required>
+                            <% cat.forEach(el => { %>
+                                <option value="<%= el.id %>" <%= coupon.category_id === el.id ? 'selected' : '' %>>
+                                    <%= el.name %>
+                                </option>
+                            <% }) %>
+                        </select>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="mb-3">
+                        <label for="description" class="form-label small fw-semibold text-secondary">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="3" required><%= coupon.description %></textarea>
+                    </div>
+
+                    <!-- Price & Stock Row -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="price" class="form-label small fw-semibold text-secondary">Price (Rp)</label>
+                            <input type="number" class="form-control" id="price" name="price" min="0" value="<%= coupon.price %>" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="stock" class="form-label small fw-semibold text-secondary">Stock</label>
+                            <input type="number" class="form-control" id="stock" name="stock" min="0" value="<%= coupon.stock %>" required>
+                        </div>
+                    </div>
+
+                    <!-- Image URL & Expired Date Row -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <label for="image" class="form-label small fw-semibold text-secondary">Image URL</label>
+                            <input type="url" class="form-control" id="image" name="image" value="<%= coupon.image %>" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="expired_date" class="form-label small fw-semibold text-secondary">Expired Date</label>
+                            <input type="date" class="form-control" id="expired_date" name="expired_date" value="<%= new Date(coupon.expired_date).toISOString().split('T')[0] %>" required>
+                        </div>
+                    </div>
+
+                    <!-- Container Error -->
+                    <% if (typeof error !== 'undefined' && error) { %>
+                        <div class="alert alert-danger py-2 px-3 small mb-4" role="alert">
+                            <%= error %>
+                        </div>
+                    <% } %>
+
+                    <!-- Form Buttons -->
+                    <div class="d-flex justify-content-end gap-2">
+                        <a href="/cms" class="btn btn-light border px-4">Cancel</a>
+                        <button type="submit" class="btn btn-purple px-4">Update Coupon</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4 px-4">
+        <div class="container-fluid text-center">
+            <p class="text-muted small mb-0">&copy; 2026 Kupotan. All rights reserved. | Terms of Use | Privacy Policy</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -46,12 +46,6 @@ app.post('/register', Controller.postRegister) //validate findOne, email sudah d
 app.get('/login', Controller.login)
 app.post('/login', Controller.postLogin)
 
-app.get('/cms', Controller.cms) //nanti dihapus
-app.post('/cms', Controller.postCoupon) //nanti dihapus
-app.get('/profile', Controller.profile) //nanti dihapus
-app.get('/profile/edit', Controller.editProfile)
-app.get('/profile/delete', Controller.deleteProfile)
-
 /*
 app.use(
     function (req, res, next) {
@@ -80,13 +74,14 @@ app.get('/profile/delete', Controller.deleteProfile)
 // app.get('/cms', isAdmin, Controller.cms)
 // app.post('/cms', isAdmin, Controller.postCoupon)
 app.get('/cms', Controller.cms)
-app.post('/cms', Controller.postCoupon)
 
 app.get('/logout', Controller.logout)
 app.get('/coupons', Controller.coupons) // nanti di redirect ke '/'
 app.get('/coupons/add', Controller.addCoupon)
-app.get('/coupons/post', Controller.postCoupon)
+app.get('/coupons/post', Controller.postAddCoupon)
 app.get('/coupons/:couponId', Controller.couponDetail)
+app.get('/coupons/:couponId/edit', Controller.editCoupon)
+app.post('/coupons/:couponId/edit', Controller.postEditCoupon)
 app.get('/coupons/:couponId/delete', Controller.deleteCoupon)
 
 app.listen(port, () => {
