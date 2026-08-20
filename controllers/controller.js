@@ -7,9 +7,10 @@ const {
     Profile,
     User
 } = require('../models');
-const { Op, where } = require('sequelize')
+const { Op } = require('sequelize')
 const formatPrice = require('../helpers/helper')
 const bcrypt = require('bcryptjs')
+const qrcode = require('qrcode');
 
 class Controller {
     static async landing(req, res) {
@@ -154,7 +155,7 @@ class Controller {
                 stock,
                 image,
                 expired_date
-            } =req.body
+            } = req.body
             await Coupon.update({
                 title,
                 category_id,
@@ -163,7 +164,7 @@ class Controller {
                 stock,
                 image,
                 expired_date
-            },{
+            }, {
                 where: {
                     id: couponId
                 }
@@ -187,9 +188,30 @@ class Controller {
 
     static async couponDetail(req, res) {
         try {
+            const { couponId } = req.params;
+
+            // 1. Ambil data kupon beserta kategorinya
+            const coupon = await Coupon.findByPk(couponId, {
+                include: [Category]
+            });
+
+            if (!coupon) {
+                return res.status(404).send('Coupon not found');
+            }
+
+            // 2. Buat URL absolut untuk QR Code (Mengarahkan ke halaman detail kupon ini)
+            const fullUrl = `${req.protocol}://${req.get('host')}/coupons/${coupon.id}`;
+            const qrCodeUrl = await qrcode.toDataURL(fullUrl);
+
+            // 3. Render ke EJS
+            res.render('couponDetail', {
+                coupon,
+                qrCodeUrl,
+                formatPrice // Kirim helper function formatPrice jika ada
+            });
 
         } catch (error) {
-            res.send(error)
+            res.send(error.message);
         }
     }
 
