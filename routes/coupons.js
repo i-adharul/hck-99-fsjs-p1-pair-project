@@ -7,7 +7,7 @@ const isAdmin = function (req, res, next) {
         const error = "You have no access."
         // console.log("error >>>>", error);
         // console.log(req.session);
-        return res.redirect(`/?error=${error}`)
+        return res.redirect(`/login?error=${error}`)
     }
     // console.log("isAdmin >>>>", req.session);
     next()

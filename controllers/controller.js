@@ -8,9 +8,9 @@ const {
     User
 } = require('../models');
 const { Op } = require('sequelize')
-const formatPrice = require('../helpers/helper')
+const {formatPrice, formatDate} = require('../helpers/helper')
 const bcrypt = require('bcryptjs')
-const qrcode = require('qrcode');
+const QRCode = require('qrcode');
 
 class Controller {
     //index
@@ -19,8 +19,8 @@ class Controller {
             let { search, category } = req.query
             let coupons = await Coupon.getCouponsByCategory(search, category)
             let cat = await Category.findAll()
-            // let isLoggedIn = req.session.email || null
-            res.render('landingPage', { coupons, cat, formatPrice })
+            let isLoggedIn = !!req.session.email;
+            res.render('landingPage', { coupons, cat, formatPrice, isLoggedIn })
         } catch (error) {
             res.send(error.message)
         }
@@ -62,10 +62,10 @@ class Controller {
     //login
     static async login(req, res) {
         try {
-            if (req.session.email) {
+            const { error } = req.query
+            if (req.session.email && !error) {
                 return res.redirect('/');
             }
-            const { error } = req.query
             res.render('login', { error })
         } catch (error) {
             res.send(error)
@@ -108,7 +108,7 @@ class Controller {
             let { search, category, deletedCoupon } = req.query
             let coupons = await Coupon.getCouponsByCategory(search, category)
             let cat = await Category.findAll()
-            res.render('coupons', { coupons, cat, formatPrice, deletedCoupon })
+            res.render('coupons', { coupons, cat, formatPrice, formatDate, deletedCoupon })
         } catch (error) {
             res.send(error)
         }
@@ -167,7 +167,6 @@ class Controller {
         try {
             const { couponId } = req.params;
 
-            // 1. Ambil data kupon beserta kategorinya
             const coupon = await Coupon.findByPk(couponId, {
                 include: [Category]
             });
@@ -176,14 +175,15 @@ class Controller {
                 return res.status(404).send('Coupon not found');
             }
 
-            // 2. Buat URL absolut untuk QR Code (Mengarahkan ke halaman detail kupon ini)
+
             const fullUrl = `${req.protocol}://${req.get('host')}/coupons/${coupon.id}`;
-            const qrCodeUrl = await qrcode.toDataURL(fullUrl);
+            const qrCodeUrl = await QRCode.toDataURL(fullUrl);
 
             res.render('couponDetail', {
                 coupon,
                 qrCodeUrl,
-                formatPrice
+                formatPrice,
+                formatDate
             });
 
         } catch (error) {

@@ -129,7 +129,7 @@
                         <div class="mb-4">
                             <span class="text-muted small d-block">Harga Promo:</span>
                             <h3 class="fw-bold text-dark mb-0">
-                                <%= typeof formatPrice === 'function' ? formatPrice(coupon.price) : 'Rp ' + coupon.price.toLocaleString('id-ID') %>
+                                <%= formatPrice(coupon.price) %>
                             </h3>
                         </div>
 
@@ -155,7 +155,7 @@
                                 <div class="p-2 border rounded bg-light text-center">
                                     <span class="text-muted small d-block" style="font-size: 0.75rem;">Berlaku Hingga</span>
                                     <span class="fw-bold text-dark small">
-                                        <%= new Date(coupon.expired_date).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' }) %>
+                                        <%= formatDate(coupon.expired_date) %>
                                     </span>
                                 </div>
                             </div>

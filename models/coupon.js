@@ -2,7 +2,7 @@
 const {
   Model
 } = require('sequelize');
-const {Op} = require('sequelize')
+const { Op } = require('sequelize')
 
 module.exports = (sequelize, DataTypes) => {
   class Coupon extends Model {
@@ -20,6 +20,10 @@ module.exports = (sequelize, DataTypes) => {
       Coupon.hasMany(models.OrderItem, {
         foreignKey: 'coupon_id'
       })
+    }
+
+    get inputExpiredDate() {
+      return new Date(this.expired_date).toISOString().split('T')[0]
     }
 
     static async getCouponsByCategory(search, category) {

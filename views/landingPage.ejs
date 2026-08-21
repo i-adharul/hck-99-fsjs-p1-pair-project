@@ -136,26 +136,46 @@
 
 <body>
 
-    <!-- Top utility bar -->
+    <!-- Top Utility Bar / Header -->
     <div class="top-bar py-1 px-3 text-end">
-        <a href="/profile">Profile</a>
-        <a href="/register">Sign Up</a>
+        <% if (isLoggedIn) { %>
+            <!-- Tampilan Jika User Sudah Login -->
+            <a href="/profile" class="text-white text-decoration-none small">My Profile</a>
+            <% } else { %>
+                <!-- Tampilan Jika User Belum Login -->
+                <a href="/login" class="text-white text-decoration-none small me-2">Login</a>
+                <a href="/register" class="text-white text-decoration-none small">Register</a>
+                <% } %>
     </div>
 
-    <!-- Main Navbar (Search Only) -->
+    <!-- Main Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-2">
-        <div class="container-fluid px-4">
-            <a class="navbar-brand me-4" href="/">Kupota</a>
+        <div class="container-fluid px-4 d-flex align-items-center justify-content-between">
 
-            <!-- Search Form -->
-            <form action="/" method="GET" class="flex-grow-1 me-4">
-                <input class="form-control form-control-sm" type="search" name="search" placeholder="Search deals...">
+            <!-- Logo -->
+            <a class="navbar-brand me-4 fw-bold flex-shrink-0" href="/" style="color: #6a1b9a;">Kupota</a>
+
+            <!-- Form Search -->
+            <form action="/" method="GET" class="flex-grow-1 mx-3">
+                <input class="form-control form-control-sm w-100" type="search" name="search"
+                    placeholder="Cari promo, diskon, atau tempat wisata..."
+                    value="<%= typeof search !== 'undefined' ? search : '' %>">
             </form>
 
+            <!-- Tombol Aksi Navigasi -->
             <div class="d-flex align-items-center flex-shrink-0">
-                <a href="/login" class="text-dark me-3 text-decoration-none small fw-semibold">Login</a>
-                <a href="/register" class="btn btn-outline-dark btn-sm px-3">Register</a>
+                <% if (isLoggedIn) { %>
+                    <!-- Jika Sudah Login: Hanya Tampilkan Tombol Profile -->
+                    <a href="/profile" class="btn btn-purple btn-sm px-3"
+                        style="background-color: #6a1b9a; color: #fff;">My Profile</a>
+                    <% } else { %>
+                        <!-- Jika Belum Login: Tampilkan Login & Register -->
+                        <a href="/login" class="btn btn-outline-dark btn-sm px-3 me-2">Login</a>
+                        <a href="/register" class="btn btn-purple btn-sm px-3"
+                            style="background-color: #6a1b9a; color: #fff;">Register</a>
+                        <% } %>
             </div>
+
         </div>
     </nav>
 

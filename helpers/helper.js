@@ -2,4 +2,12 @@ function formatPrice(price) {
     return 'IDR ' + price.toLocaleString('id-ID')
 }
 
-module.exports = formatPrice
+function formatDate(date) {
+    return new Date(date).toLocaleDateString('id-ID', {
+         day: 'numeric', 
+         month: 'short', 
+         year: 'numeric' 
+        })
+}
+
+module.exports = {formatPrice, formatDate}

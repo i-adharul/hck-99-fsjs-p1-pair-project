@@ -188,7 +188,7 @@
                                         </span>
                                     </td>
                                     <td class="fw-bold text-dark">
-                                        <%= typeof formatPrice === 'function' ? formatPrice(coupon.price) : 'Rp ' + coupon.price.toLocaleString('id-ID') %>
+                                        <%= formatPrice(coupon.price) %>
                                     </td>
                                     <td>
                                         <span class="badge <%= coupon.stock > 0 ? 'bg-success-subtle text-success border border-success-subtle' : 'bg-danger-subtle text-danger border border-danger-subtle' %>">
@@ -196,7 +196,7 @@
                                         </span>
                                     </td>
                                     <td class="small text-muted">
-                                        <%= new Date(coupon.expired_date).toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' }) %>
+                                        <%= formatDate(coupon.expired_date) %>
                                     </td>
                                     <td class="text-center">
                                         <div class="d-flex justify-content-center gap-1">
