@@ -106,10 +106,10 @@
     <!-- Main Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-2">
         <div class="container-fluid px-4">
-            <a class="navbar-brand me-4" href="/cms">Kupota <span class="badge bg-secondary fs-6 align-middle ms-1">CMS</span></a>
+            <a class="navbar-brand me-4" href="/coupons">Kupota <span class="badge bg-secondary fs-6 align-middle ms-1">CMS</span></a>
 
             <!-- Search Form -->
-            <form action="/cms" method="GET" class="flex-grow-1 me-4">
+            <form action="/coupons" method="GET" class="flex-grow-1 me-4">
                 <input class="form-control form-control-sm" type="search" name="search" placeholder="Search deals in CMS...">
             </form>
 
@@ -122,7 +122,7 @@
     <!-- Sub-Bar Kategori Filter -->
     <div class="category-bar-wrapper shadow-sm">
         <div class="container-fluid px-4">
-            <form action="/cms" method="GET">
+            <form action="/coupons" method="GET">
                 <div class="category-scroll">
                     <button type="submit" name="category" value="" class="btn-cat-chip">Semua</button>
                     <% cat.forEach(el => { %>

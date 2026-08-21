@@ -13,6 +13,7 @@ const bcrypt = require('bcryptjs')
 const qrcode = require('qrcode');
 
 class Controller {
+    //index
     static async landing(req, res) {
         try {
             let { search, category } = req.query
@@ -25,6 +26,7 @@ class Controller {
         }
     }
 
+    //register
     static async register(req, res) {
         try {
             const { error } = req.query
@@ -33,7 +35,6 @@ class Controller {
             res.send(error)
         }
     }
-
     static async postRegister(req, res) {
         try {
             const { email, password } = req.body
@@ -58,15 +59,18 @@ class Controller {
         }
     }
 
+    //login
     static async login(req, res) {
         try {
+            if (req.session.email) {
+                return res.redirect('/');
+            }
             const { error } = req.query
             res.render('login', { error })
         } catch (error) {
             res.send(error)
         }
     }
-
     static async postLogin(req, res) {
         try {
             const { email, password } = req.body
@@ -81,7 +85,7 @@ class Controller {
                     req.session.email = user.email
                     req.session.role = user.role
                     if (user.role === 'admin') {
-                        return res.redirect('/cms')
+                        return res.redirect('/coupons')
                     } else {
                         return res.redirect('/')
                     }
@@ -98,41 +102,17 @@ class Controller {
         }
     }
 
-    static async cms(req, res) {
+    //coupons
+    static async coupons(req, res) {
         try {
             let { search, category, deletedCoupon } = req.query
             let coupons = await Coupon.getCouponsByCategory(search, category)
             let cat = await Category.findAll()
-            res.render('cms', { coupons, cat, formatPrice, deletedCoupon })
+            res.render('coupons', { coupons, cat, formatPrice, deletedCoupon })
         } catch (error) {
             res.send(error)
         }
     }
-
-    static async coupons(req, res) {
-        try {
-            res.redirect('/')
-        } catch (error) {
-            res.send(error)
-        }
-    }
-
-    static async addCoupon(req, res) {
-        try {
-            // next release
-        } catch (error) {
-            res.send(error)
-        }
-    }
-
-    static async postAddCoupon(req, res) {
-        try {
-            // next release
-        } catch (error) {
-            res.send(error)
-        }
-    }
-
     static async editCoupon(req, res) {
         try {
             const { couponId } = req.params
@@ -143,7 +123,6 @@ class Controller {
             res.send(error)
         }
     }
-
     static async postEditCoupon(req, res) {
         try {
             const { couponId } = req.params
@@ -169,23 +148,21 @@ class Controller {
                     id: couponId
                 }
             })
-            res.redirect('/cms')
+            res.redirect('/coupons')
         } catch (error) {
             res.send(error)
         }
     }
-
     static async deleteCoupon(req, res) {
         try {
             const { couponId } = req.params
             let coupon = await Coupon.findByPk(couponId)
             await coupon.destroy()
-            res.redirect(`/cms?deletedCoupon=${coupon.title}`)
+            res.redirect(`/coupons?deletedCoupon=${coupon.title}`)
         } catch (error) {
             res.send(error)
         }
     }
-
     static async couponDetail(req, res) {
         try {
             const { couponId } = req.params;
@@ -203,21 +180,62 @@ class Controller {
             const fullUrl = `${req.protocol}://${req.get('host')}/coupons/${coupon.id}`;
             const qrCodeUrl = await qrcode.toDataURL(fullUrl);
 
-            // 3. Render ke EJS
             res.render('couponDetail', {
                 coupon,
                 qrCodeUrl,
-                formatPrice // Kirim helper function formatPrice jika ada
+                formatPrice
             });
 
         } catch (error) {
             res.send(error.message);
         }
     }
+    static async addCoupon(req, res) {
+        try {
+            // next release
+        } catch (error) {
+            res.send(error)
+        }
+    }
+    static async postAddCoupon(req, res) {
+        try {
+            // next release
+        } catch (error) {
+            res.send(error)
+        }
+    }
+
+    //profile
+    static async profile(req, res) {
+        try {
+            let user = await User.findOne({
+                where: {
+                    email: req.session.email
+                },
+                include: [Profile]
+            });
+
+            res.render('profile', {
+                user: user,
+                profile: user.Profile
+            });
+        } catch (error) {
+            res.send(error.message)
+        }
+    }
+
+    //logout
+    static async logout(req, res) {
+        try {
+            req.session.destroy(res.redirect('login'))
+        } catch (error) {
+            res.send(error)
+        }
+    }
 
     static async checkout(req, res) {
         try {
-
+            // next release
         } catch (error) {
             res.send(error)
         }
@@ -242,48 +260,6 @@ class Controller {
     static async paymentSuccess(req, res) {
         try {
             // next release
-        } catch (error) {
-            res.send(error)
-        }
-    }
-
-    static async profile(req, res) {
-        try {
-            let user = await User.findOne({
-                where: {
-                    email: req.session.email
-                },
-                include: [Profile]
-            });
-
-            res.render('profile', {
-                user: user,
-                profile: user.Profile
-            });
-        } catch (error) {
-            res.send(error.message)
-        }
-    }
-
-    static async deleteProfile(req, res) {
-        try {
-
-        } catch (error) {
-            res.send(error.message)
-        }
-    }
-
-    static async editProfile(req, res) {
-        try {
-
-        } catch (error) {
-            res.send(error.message)
-        }
-    }
-
-    static async logout(req, res) {
-        try {
-            req.session.destroy(res.redirect('login'))
         } catch (error) {
             res.send(error)
         }
